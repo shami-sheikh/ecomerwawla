@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact Us</title>
+    <style>
+      .font-Prata {
+        font-family: "Prata", serif;
+      }
+      .hero-bg {
+        background-image: url("https://via.placeholder.com/1920x1080/4ECDC4/FFFFFF?text=Hero+Background");
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-[#FEF6F6] overflow-x-hidden">
+     <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"
+    >
+      <div class="bg-white h-full w-64 shadow-lg">
+        <div class="p-4 border-b">
+          <button
+            id="closeMobileMenuBtn"
+            class="float-right text-gray-600 hover:text-cyan-600 transition-all duration-500"
+          >
+            <i class="fas fa-times text-xl"></i>
+          </button>
+          <div class="clear-both"></div>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li>
+              <input
+                type="text"
+                placeholder="Search..."
+                class="border border-gray-300 rounded-lg py-2 p-2"
+              />
+            </li>
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >Home</a
+              >
+            </li>
+ <li>
+              <a
+                href="shop.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >Shop</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >Contact</a
+              >
+            </li>
+            <li class="relative group">
+              <a
+                href="login.html"
+                class="hover:text-cyan-600 font-Prata transition-colors"
+                >login</a
+              >
+              <span
+                class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"
+              ></span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+
+    <nav
+      class="flex justify-between items-center w-full py-4 shadow-lg px-4 lg:px-32 bg-[#FEF6F6] relative z-40"
+    >
+      <!-- Logo -->
+      <a href="index.html" class="flex-shrink-0">
+        <img
+          src="products/logo-search-grid-1x.png"
+          alt="Logo"
+          class="h-12 md:h-16 lg:h-20 w-auto object-contain"
+          loading="eager"
+        />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center">
+        <ul class="flex gap-8 lg:gap-10 font-semibold text-gray-700 list-none">
+          <li>
+            <input
+              type="text"
+              placeholder="Search..."
+              class="border border-gray-300 rounded-lg py-2 px-4"
+            />
+          </li>
+          <li class="relative group">
+            <a
+              href="index.html"
+              class="hover:text-cyan-600 font-Prata transition-colors"
+              >Home</a
+            >
+            <span
+              class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+           <li class="relative group">
+            <a
+              href="shop.html"
+              class="hover:text-cyan-600 font-Prata transition-colors"
+              >shop</a
+            >
+            <span
+              class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group">
+            <a
+              href="blog.html"
+              class="hover:text-cyan-600 font-Prata transition-colors"
+              >Blog</a
+            >
+            <span
+              class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+         <li class="relative group">
+            <a
+              href="contact.html"
+              class="text-cyan-600 font-bold border-b-2 border-cyan-600 font-Prata transition-colors"
+            >
+              contact
+            </a>
+          </li>
+          <li class="relative group">
+            <a
+              href="login.html"
+              class="hover:text-cyan-600 font-Prata transition-colors"
+              >login</a
+            >
+            <span
+              class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="mobileMenuBtn" class="md:hidden text-gray-700 hover:text-cyan-600 transition-colors text-3xl  font-bold">
+          ...
+        </button>
+    </nav>
+<!-- hero section -->
+ <section class="relative h-64 flex lg:h-96 bg-center hero-bg object-cover">
+
+    <div class="absolutec inset-0">
+      <img src="imges/banner.png" alt="" class="w-full h-full inset-0">
+    </div>
+    <div class="flex flex-col absolute justify-center items-center inset-0">
+      <h1 class="text-xl lg:text-4xl max-w-48 py-4  text-white font-Prata font-semibold">#let's_talk</h1>
+    <p class="text text-red-400 lg:text-xl">leave a massage. We love to hear from you</p>
+    </div>
+
+ </section>
+ <!-- map section -->
+  <section class="w-full h-96 flex flex-col lg:grid lg:grid-cols-2 inset-0 lg:px-32 px-4 py-10">
+    <div class="w-full h-screen">
+<p class="py-2 text-xs lg:text-xs text-gray-500">get in touch</p>
+      <h1 class="text-2xl py-2 lg:text-2xl">visit our agency location or contact us today</h1>
+      <p class="text-gray-500">head office</p>
+    <div class="text-gray-500">
+      <p class="py-4 "><i class="fa-solid fa-archway "></i><span class="lg:ml-10 ml-4">Asansol ok road Jharkhand Bagodar</span> </p>
+      <p class="py-4 "><i class="fa-solid fa-envelope"></i><span class="lg:ml-10 ml-4">Contact@example.com</span> </p>
+      <p class="py-4 "><i class="fa-solid fa-phone"></i><span class="lg:ml-10 ml-4">Contact@example.com</span> </p>
+      <p class="py-4 "><i class="fa-solid fa-clock"></i><span class="lg:ml-10 ml-4">mondey to saturday 9AM-6PM</span> </p>
+</div>
+    </div>
+    <!-- mapbox -->
+  <div class="my-5 ">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.071070847818!2d86.95722257978234!3d23.709155923774276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f71f154c5557cb%3A0x42f21a1b31ec3f9e!2sWebel%20IT%20Park%20Asansol%20Branch!5e0!3m2!1sen!2sin!4v1758107067093!5m2!1sen!2sin" class="lg:w-[600px] lg:h-[450px] rounded-lg" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  </section>
+    <!-- contact section -->
+    <form id="contact-form" class="flex my-32 flex-col md:flex-row lg:flex-row justify-between p-2 md:16 lg:16 w-full min-h-screen">
+        <div class="flex flex-col py-16 px-4 lg:px-36 w-96 lg:w-full gap-4">
+            <h1 class="text-pink-600 font-bold p-4 rounded-lg text-xl lg:text-4xl">Contact Us</h1>
+            
+            <div>
+                <label for="contact-name" class="text-gray-600 block lg:py-2 text-sm">Name</label>
+                <input name="name" type="text" id="contact-name" placeholder="Enter your name" required 
+                       class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+            </div>
+            
+            <div>
+                <label for="contact-email" class="text-gray-600 block lg:py-2 text-sm">Email</label>
+                <input name="email" type="email" id="contact-email" placeholder="Enter your email" required 
+                       class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+            </div>
+            
+            <div>
+                <label for="contact-message" class="text-gray-600 block lg:py-2 text-sm">Message</label>
+                <textarea name="message" id="contact-message" placeholder="Enter your message" required 
+                          class="w-full h-32 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
+            </div>
+            
+            <button type="submit" id="contact-submitbtn" 
+                    class="w-full bg-gradient-to-br from-cyan-500 to-blue-500 text-white py-3 rounded-lg hover:opacity-90 transition-opacity">
+                <span id="button-text">Submit</span>
+                <span id="loading-text" class="hidden">Sending...</span>
+            </button>
+            
+            <!-- Status message -->
+            <div id="status-message" class="hidden p-3 rounded-lg text-center"></div>
+        </div>
+        <!-- contact people -->
+        <div class="relative w-full py-20  px-10 lg:px-48">
+          <!-- box1 -->
+            <div class=" to-blue-100 rounded-xl py-10 flex    items-center justify-center gap-8">
+             <img src="people/1.png" alt="">
+           <div class="text-gray-500">
+            <p class="py-2 lg:text-2xl text-xl font-semibold text-[#212121] ">john doe</p>
+            <p >senior marketing maneger</p>
+            <p>Phone: +91 123 456 7890</p>
+            <p>email: john.doe@example.com</p>
+           </div>
+                
+            </div>
+            <!-- box2 -->
+                <div class=" to-blue-100 rounded-xl py-5 flex    items-center justify-center gap-8">
+             <img src="people/2.png" alt="">
+           <div class="text-gray-500">
+            <p class="py-2 lg:text-2xl text-xl font-semibold text-[#212121] ">william smith </p>
+            <p >senior marketing maneger</p>
+            <p>Phone: +91 123 456 7890</p>
+            <p>email: william.smith@example.com</p>
+           </div>
+                
+            </div>
+            <!-- box3 -->
+                 <div class=" to-blue-100 rounded-xl py-5 flex    items-center justify-center gap-8">
+             <img src="people/3.png" alt="">
+           <div class="text-gray-500">
+            <p class="py-2 lg:text-2xl text-xl font-semibold text-[#212121] ">Emma Stone</p>
+            <p >senior marketing maneger</p>
+            <p>Phone: +91 123 456 7890</p>
+            <p>email: emma.stone@example.com</p>
+           </div>
+                
+            </div>
+        </div>
+    </form>
+    <!-- //footer -->
+  <footer id="footer" class="bg-gray-100 py-8 md:py-12 px-4 md:px-20 mt-10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+      >
+        <!-- Company Info -->
+        <div class="flex flex-col gap-4">
+          <img
+            src="products/logo-search-grid-1x.png"
+            alt="Logo"
+            class="h-16 w-16"
+          />
+          <h3 class="font-bold text-xl text-gray-700">Contact</h3>
+          <div class="text-gray-600 space-y-2 text-sm">
+            <p>Address: Jharkhand Bagodar District: Giridih 825322</p>
+            <p>Phone: +91 123 456 7890</p>
+            <p>Hours: Mon-Sat 9AM-6PM</p>
+          </div>
+          <div class="flex gap-4 text-gray-600">
+            <i
+              class="fab fa-facebook-f hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+            <i
+              class="fab fa-twitter hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+            <i
+              class="fab fa-instagram hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+            <i
+              class="fab fa-linkedin-in hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+          </div>
+        </div>
+
+        <!-- About Links -->
+        <div class="flex flex-col gap-4">
+          <h3 class="font-bold text-xl text-gray-700">About</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li>
+              <a href="#about" class="hover:text-cyan-600 transition-colors"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="hover:text-cyan-600 transition-colors"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-cyan-600 transition-colors"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a href="#faq" class="hover:text-cyan-600 transition-colors"
+                >FAQ</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Account Links -->
+        <div class="flex flex-col gap-4">
+          <h3 class="font-bold text-xl text-gray-700">My Account</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li>
+              <a href="#signin" class="hover:text-cyan-600 transition-colors"
+                >Sign In</a
+              >
+            </li>
+            <li>
+              <a href="#cart" class="hover:text-cyan-600 transition-colors"
+                >View Cart</a
+              >
+            </li>
+            <li>
+              <a href="#wishlist" class="hover:text-cyan-600 transition-colors"
+                >My Wishlist</a
+              >
+            </li>
+            <li>
+              <a href="#help" class="hover:text-cyan-600 transition-colors"
+                >Help</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- App Download -->
+        <div class="flex flex-col gap-4">
+          <h3 class="font-bold text-xl text-gray-700">Install App</h3>
+          <p class="text-gray-600 text-sm">From App Store or Google Play</p>
+          <div class="flex gap-2">
+            <img
+              src="pay/app.jpg"
+              alt="App Store"
+              class="h-10 rounded"
+            />
+            <img
+              src="pay/play.jpg"
+              alt="Google Play"
+              class="h-10 rounded"
+            />
+          </div>
+          <p class="text-gray-600 text-sm">Secured Payment Gateways</p>
+          <img
+            src="pay/pay.png"
+            alt="Payment Methods"
+            class="max-w-48"
+          />
+        </div>
+      </div>
+
+      <div
+        class="border-t border-gray-300 mt-8 pt-4 text-center text-gray-600 text-sm"
+      >
+        <p>&copy; 2025 Your Store. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+       <script src="app.js"></script>
+
+</body>
+</html>
+  </body>
+</html>

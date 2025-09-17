@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-Prata {
+        font-family: "Prata", serif;
+      }
+      .hero-bg {
+        background-image: url("https://via.placeholder.com/1920x1080/4ECDC4/FFFFFF?text=Hero+Background");
+      }
+    </style>
+    <title>e-comerse</title>
+  </head>
+  <body class="font-sans bg-[#FEF6F6] overflow-x-hidden">
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"
+    >
+      <div class="bg-white h-full w-64 shadow-lg">
+        <div class="p-4 border-b">
+          <button
+            id="closeMobileMenuBtn"
+            class="float-right text-gray-600 hover:text-cyan-600 transition-all duration-500"
+          >
+            <i class="fas fa-times text-xl"></i>
+          </button>
+          <div class="clear-both"></div>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li>
+              <input id="Searchbtn"
+                type="text"
+                placeholder="Search..."
+                class="border border-gray-300 rounded-lg py-2 px-2"
+              />
+            </li>
+            <li>
+              <a
+                href="index.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >Home</a
+              >
+            </li>
+  <li>
+              <a
+                href="shop.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >shop</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >Contact</a
+              >
+            </li>
+            <li class="relative group">
+              <a
+                href="login.html"
+                class="hover:text-cyan-600 font-Prata transition-colors"
+                >login</a
+              >
+              <span
+                class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"
+              ></span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+
+    <nav
+      class="flex justify-between items-center w-full py-4 shadow-lg px-4 lg:px-32 bg-[#FEF6F6] relative z-40"
+    >
+      <!-- Logo -->
+      <a href="index.html" class="flex-shrink-0">
+        <img
+          src="products/logo-search-grid-1x.png"
+          alt="Logo"
+          class="h-12 md:h-16 lg:h-20 w-auto object-contain"
+          loading="eager"
+        />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center">
+        <ul class="flex gap-8 lg:gap-10 font-semibold text-gray-700 list-none">
+          <li>
+            <input
+              type="text"
+              placeholder="Search..."
+              class="border border-gray-300 rounded-lg py-2 px-4"
+            />
+          </li>
+          <li class="relative group">
+            <a
+              href="index.html"
+              class="hover:text-cyan-600 font-Prata transition-colors"
+              >Home</a
+            >
+            <span
+              class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group">
+            <a
+              href="shop.html"
+              class="text-cyan-600 font-bold border-b-2 border-cyan-600 font-Prata transition-colors"
+            >
+              shop
+            </a>
+          </li>
+          <li class="relative group">
+            <a
+              href="blog.html"
+              class="hover:text-cyan-600 font-Prata transition-colors"
+              >Blog</a
+            >
+            <span
+              class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group">
+            <a
+              href="contact.html"
+              class="hover:text-cyan-600 font-Prata transition-colors"
+              >Contact</a
+            >
+            <span
+              class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+          <li class="relative group">
+            <a
+              href="login.html"
+              class="hover:text-cyan-600 font-Prata transition-colors"
+              >login</a
+            >
+            <span
+              class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobileMenuBtn"
+        class="md:hidden text-gray-700 hover:text-cyan-600 transition-colors"
+      >
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <section
+      id="hero"
+      class="relative h-96 flex items-center bg-cover bg-center hero-bg"
+    >
+      <div class="absolute inset-0 ">
+        <img
+          src="banners/b1.jpg"
+          alt="Hero Product Image"
+          class="w-full h-full object-cover  inset-0 lg:pr-1 md:pr-1"
+        />
+      </div>
+<div class="text-red-700 absolute inset-0 flex flex-col items-center justify-center">
+        <p class="text-white font-bold text-xl lg:text-3xl py-5">#StayHome</p>
+<p>save more with coupens and upto 70% off</p>
+      </div>
+    </section>
+    <!-- newletter -->
+        <section
+      id="newsletter"
+      class="py-8 lg:mt-10 mt-4 md:py-12 bg-gradient-to-r from-cyan-500 to-blue-400 mx-4 md:mx-24 rounded-lg"
+    >
+      <div class="flex flex-col items-center justify-center px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          Sign Up for Newsletter
+        </h2>
+        <p class="text-white/90 mb-6 text-sm md:text-base">
+          Get the latest updates on new products and upcoming sales
+        </p>
+        <form class="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent"
+          />
+          <button
+            type="submit"
+            class="bg-white text-cyan-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="product1" class="w-full py-8 md:py-16">
+      <div class="max-w-7xl mx-auto text-center px-4">
+        <!-- Section Heading -->
+        <h2 class="text-gray-800 text-2xl md:text-4xl font-bold">
+          Featured Products
+        </h2>
+        <p class="text-gray-500 text-base md:text-lg mt-2">
+          Summer Collection New Model Design
+        </p>
+
+        <!-- Product Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-8 md:mt-10"
+        >
+          <div 
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+            <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/f1.jpg"
+                id="imgclick"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Cartoon Astronaut T-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Best quality product</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$99.99</p>
+              <a
+                href="productdetails.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+            <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/n2.jpg"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+            <p class="text-sm text-gray-500 text-left mt-2">nike</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Cartoon Astronaut T-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Best quality product</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$99.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+            <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/f3.jpg"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Cartoon Astronaut T-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Best quality product</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$99.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+            <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/n4.jpg"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Cartoon Astronaut T-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Best quality product</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$99.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+        <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+            <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/f5.jpg"
+                id="imgclick"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Cartoon Astronaut T-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Best quality product</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$59.99</p>
+              <a
+                href="productdetails.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+          <!-- box -->
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+             <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/f6.jpg"
+                id="imgclick"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Summer T-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Latest design</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$59.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+          <!-- box -->
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+             <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/f7.jpg"
+                id="imgclick"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Summer T-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Latest design</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$59.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+          <!-- box -->
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+             <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/f8(1).jpg"
+                id="imgclick"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Summer T-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Latest design</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$59.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+          <!-- box -->
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+            <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/f8.jpg"
+                id="imgclick"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Summer T-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Latest design</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$59.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+          <!-- box -->
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+             <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/n2.jpg"
+                id="imgclick"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Summer T-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Latest design</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$59.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+          <!-- box -->
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+           <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/n3.jpg"
+                id="imgclick"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Casual T-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Trending style</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$39.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+            <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/n5.jpg"
+                id="imgclick"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Premium T-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Hot selling</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$29.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              src="products/f5.jpg"
+              alt="Product 5"
+              class="w-full h-40 md:h-48 object-cover rounded-md"
+            />
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Cartoon Astrenote t-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Best quality product</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$49.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+            <img
+              src="products/f6.jpg"
+              alt="Product 6"
+              class="w-full h-40 md:h-48 object-cover rounded-md"
+            />
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Summer t-shirt
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Latest design</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$59.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+             <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/n6.jpg"
+                id="imgclick"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              Half Trouser for Women
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Trending style</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$39.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white p-4 md:p-6 shadow-lg rounded-lg hover:scale-105 hover:shadow-2xl transition-all duration-300"
+          >
+             <a href="productdetails.html" aria-label="View product details">
+              <img
+                src="products/n7.jpg"
+                id="imgclick"
+                alt="Product 1"
+                class="w-full h-40 md:h-48 object-cover rounded-md"
+              />
+            </a>
+            <p class="text-sm text-gray-500 text-left mt-2">Adidas</p>
+            <h3
+              class="mt-2 md:mt-4 text-base md:text-lg font-semibold text-gray-700 text-left"
+            >
+              t-shirt for Women
+            </h3>
+            <p class="text-gray-500 text-sm text-left">Hot selling</p>
+            <div class="flex text-yellow-400 text-sm my-1">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <p class="text-cyan-600 font-bold text-lg">$29.99</p>
+              <a
+                href="cart.html"
+                class="text-gray-600 hover:text-cyan-600 transition-colors"
+              >
+                <i class="fas fa-shopping-cart text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Small Banners Section -->
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-gray-100 py-8 md:py-12 px-4 md:px-20 mt-10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+      >
+        <!-- Company Info -->
+        <div class="flex flex-col gap-4">
+          <img
+            src="products/logo-search-grid-1x.png"
+            alt="Logo"
+            class="h-16 w-16"
+          />
+          <h3 class="font-bold text-xl text-gray-700">Contact</h3>
+          <div class="text-gray-600 space-y-2 text-sm">
+            <p>Address: Jharkhand Bagodar District: Giridih 825322</p>
+            <p>Phone: +91 123 456 7890</p>
+            <p>Hours: Mon-Sat 9AM-6PM</p>
+          </div>
+          <div class="flex gap-4 text-gray-600">
+            <i
+              class="fab fa-facebook-f hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+            <i
+              class="fab fa-twitter hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+            <i
+              class="fab fa-instagram hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+            <i
+              class="fab fa-linkedin-in hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+          </div>
+        </div>
+
+        <!-- About Links -->
+        <div class="flex flex-col gap-4">
+          <h3 class="font-bold text-xl text-gray-700">About</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li>
+              <a href="#about" class="hover:text-cyan-600 transition-colors"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="hover:text-cyan-600 transition-colors"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-cyan-600 transition-colors"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a href="#faq" class="hover:text-cyan-600 transition-colors"
+                >FAQ</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Account Links -->
+        <div class="flex flex-col gap-4">
+          <h3 class="font-bold text-xl text-gray-700">My Account</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li>
+              <a href="#signin" class="hover:text-cyan-600 transition-colors"
+                >Sign In</a
+              >
+            </li>
+            <li>
+              <a href="#cart" class="hover:text-cyan-600 transition-colors"
+                >View Cart</a
+              >
+            </li>
+            <li>
+              <a href="#wishlist" class="hover:text-cyan-600 transition-colors"
+                >My Wishlist</a
+              >
+            </li>
+            <li>
+              <a href="#help" class="hover:text-cyan-600 transition-colors"
+                >Help</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- App Download -->
+        <div class="flex flex-col gap-4">
+          <h3 class="font-bold text-xl text-gray-700">Install App</h3>
+          <p class="text-gray-600 text-sm">From App Store or Google Play</p>
+          <div class="flex gap-2">
+            <img src="pay/app.jpg" alt="App Store" class="h-10 rounded" />
+            <img src="pay/play.jpg" alt="Google Play" class="h-10 rounded" />
+          </div>
+          <p class="text-gray-600 text-sm">Secured Payment Gateways</p>
+          <img src="pay/pay.png" alt="Payment Methods" class="max-w-48" />
+        </div>
+      </div>
+
+      <div
+        class="border-t border-gray-300 mt-8 pt-4 text-center text-gray-600 text-sm"
+      >
+        <p>&copy; 2025 Your Store. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

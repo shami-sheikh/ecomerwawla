@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+  <body class="font-sans bg-[#FEF6F6] overflow-x-hidden">
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"
+    >
+      <div class="bg-white h-full w-64 shadow-lg">
+        <div class="p-4 border-b">
+          <button
+            id="closeMobileMenuBtn"
+            class="float-right text-gray-600 hover:text-cyan-600 transition-all duration-500"
+          >
+            <i class="fas fa-times text-xl"></i>
+          </button>
+          <div class="clear-both"></div>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li ><input type="text" placeholder="Search..." class="border border-gray-300 rounded-lg py-2 px-2" /></li>
+            <li>
+              <a href="index.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600" >Home</a
+              >
+            </li>
+             <li>
+              <a
+                href="shop.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >shop</a
+              >
+            </li>
+            <li>
+              <a
+                href="blog.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >Contact</a
+              >
+            </li>
+            <li class="relative group">
+                    <a href="login.html" class="hover:text-cyan-600 font-Prata transition-colors">login</a>
+                    <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+
+    <nav class="flex justify-between items-center w-full py-4 shadow-lg px-4 lg:px-32 bg-[#FEF6F6] relative z-40">
+        <!-- Logo -->
+        <a href="index.html" class="flex-shrink-0">
+            <img 
+                src="products/logo-search-grid-1x.png" 
+                alt="Logo" 
+                class="h-12  md:h-16 lg:h-20 w-auto object-contain"
+                loading="eager"
+            />
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center">
+            <ul class="flex gap-8 lg:gap-10 font-semibold text-gray-700 list-none">
+              <li><input type="text" placeholder="Search..." class="border border-gray-300 rounded-lg py-2 px-4" /></li>
+                <li class="relative group">
+                    <a href="index.html" class="hover:text-cyan-600 font-Prata transition-colors">Home</a>
+                    <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                </li>
+               
+                      <li class="relative group">
+    <li class="relative group">
+                    <a href="shop.html" class="hover:text-cyan-600 font-Prata transition-colors">shop</a>
+                    <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                </li> 
+                      <li class="relative group">
+
+        <a href="blog.html"
+           class="text-cyan-600 font-bold border-b-2 border-cyan-600 font-Prata transition-colors">
+          blog
+        </a>
+      </li>
+          
+                <li class="relative group">
+                    <a href="contact.html" class="hover:text-cyan-600 font-Prata transition-colors">Contact</a>
+                    <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                </li>
+                 <li class="relative group">
+                    <a href="login.html" class="hover:text-cyan-600 font-Prata transition-colors">login</a>
+                    <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <button id="mobileMenuBtn" class="md:hidden text-gray-700 hover:text-cyan-600 transition-colors">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </nav>
+    <!-- herosectio  -->
+       <section
+      id="hero"
+      class="relative h-96 flex items-center bg-cover bg-center hero-bg"
+    >
+      <div class="absolute inset-0 ">
+        <img
+          src="banners/b19.jpg"
+          alt="Hero Product Image"
+          class="w-full h-full object-cover  inset-0 lg:pr-1 md:pr-1"
+        />
+      </div>
+<div class="text-red-700 absolute inset-0 flex flex-col items-center justify-center">
+        <p class="text-white font-bold text-xl lg:text-3xl py-5">#Readmore</p>
+<p>read all case studies about our products</p>
+      </div>
+    </section>
+    <!-- newsletter -->
+       <section
+      id="newsletter"
+      class="py-8 lg:mt-10 mt-4 md:py-12 bg-gradient-to-r from-pink-500 to-green-400 mx-4 md:mx-24 rounded-lg"
+    >
+      <div class="flex flex-col items-center justify-center px-4 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          Sign Up for Newsletter
+        </h2>
+        <p class="text-white/90 mb-6 text-sm md:text-base">
+          Get the latest updates on new products and upcoming sales
+        </p>
+        <form class="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent"
+          />
+          <button
+            type="submit"
+            class="bg-white text-cyan-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+
+ <!-- Blog Section -->
+<section class="lg:px-32 py-16 px-10">
+  <div class="lg:flex items-center w-full">
+    
+    <!-- Image + Date wrapper -->
+    <div class="py-10 lg:w-[50%] w-full relative">
+      <img 
+        src="blog/b1.jpg" 
+        alt="Cotton jersey zip up hoodie" 
+        class="rounded-lg w-full h-[300px] object-cover"
+      >
+      <!-- Date on top of image -->
+      <h1 class="absolute top-4 right-4 lg:top-6 lg:right-6 text-3xl lg:text-5xl text-gray-200 font-bold drop-shadow">
+        13/01
+      </h1>
+    </div>
+
+    <!-- Text section -->
+    <div class="lg:ml-10 py-5 lg:w-[50%] w-full">
+      <h1 class="text-gray-700 text-xl lg:text-2xl py-2 font-semibold">
+        The Cotton Jersey Zip Up Hoodie
+      </h1>
+      <p class="text-gray-600 mb-4 leading-relaxed">
+        Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony.
+      </p>
+      <a 
+        href="#" 
+        class="text-cyan-600 hover:text-cyan-700 font-semibold underline transition-colors"
+      >
+        Continue Reading
+      </a>
+    </div>
+
+  </div>
+  <!-- box2 -->
+     <div class="lg:flex items-center w-full">
+    
+    <!-- Image + Date wrapper -->
+    <div class="py-10 lg:w-[50%] w-full relative">
+      <img 
+        src="blog/b2.jpg" 
+        alt="Cotton jersey zip up hoodie" 
+        class="rounded-lg w-full h-[300px] object-cover"
+      >
+      <!-- Date on top of image -->
+      <h1 class="absolute top-4 right-4 lg:top-6 lg:right-6 text-3xl lg:text-5xl text-gray-200 font-bold drop-shadow">
+    12/03
+      </h1>
+    </div>
+
+    <!-- Text section -->
+    <div class="lg:ml-10 py-5 lg:w-[50%] w-full">
+      <h1 class="text-gray-700 text-xl lg:text-2xl py-2 font-semibold">
+        how to style the Quiff
+      </h1>
+      <p class="text-gray-600 mb-4 leading-relaxed">
+        Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony.
+      </p>
+      <a 
+        href="#" 
+        class="text-cyan-600 hover:text-cyan-700 font-semibold underline transition-colors"
+      >
+        Continue Reading
+      </a>
+    </div>
+
+  </div>
+  <!-- box3 -->
+     <div class="lg:flex items-center w-full">
+    
+    <!-- Image + Date wrapper -->
+    <div class="py-10 lg:w-[50%] w-full relative">
+      <img 
+        src="blog/b3.jpg" 
+        alt="Cotton jersey zip up hoodie" 
+        class="rounded-lg w-full h-[300px] object-cover"
+      >
+      <!-- Date on top of image -->
+      <h1 class="absolute top-4 right-4 lg:top-6 lg:right-6 text-3xl lg:text-5xl text-gray-200 font-bold drop-shadow">
+      24/07
+      </h1>
+    </div>
+
+    <!-- Text section -->
+    <div class="lg:ml-10 py-5 lg:w-[50%] w-full">
+      <h1 class="text-gray-700 text-xl lg:text-2xl py-2 font-semibold">
+      must-have Skater Girl Items
+      </h1>
+      <p class="text-gray-600 mb-4 leading-relaxed">
+        Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony.
+      </p>
+      <a 
+        href="#" 
+        class="text-cyan-600 hover:text-cyan-700 font-semibold underline transition-colors"
+      >
+        Continue Reading
+      </a>
+    </div>
+
+  </div>
+  <!-- box4 -->
+     <div class="lg:flex items-center w-full">
+    
+    <!-- Image + Date wrapper -->
+    <div class="py-10 lg:w-[50%] w-full relative">
+      <img 
+        src="blog/b4.jpg" 
+        alt="Cotton jersey zip up hoodie" 
+        class="rounded-lg w-full h-[300px] object-cover"
+      >
+      <!-- Date on top of image -->
+      <h1 class="absolute top-4 right-4 lg:top-6 lg:right-6 text-3xl lg:text-5xl text-gray-200 font-bold drop-shadow">
+      16/01
+      </h1>
+    </div>
+
+    <!-- Text section -->
+    <div class="lg:ml-10 py-5 lg:w-[50%] w-full">
+      <h1 class="text-gray-700 text-xl lg:text-2xl py-2 font-semibold">
+       Runway-Inspired Street Style
+      </h1>
+      <p class="text-gray-600 mb-4 leading-relaxed">
+        Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreuse hexagon irony.
+      </p>
+      <a 
+        href="#" 
+        class="text-cyan-600 hover:text-cyan-700 font-semibold underline transition-colors"
+      >
+        Continue Reading
+      </a>
+    </div>
+
+  </div>
+</section>
+
+    <!-- footer -->
+       <footer id="footer" class="bg-gray-100 py-8 md:py-12 px-4 md:px-20 mt-10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+      >
+        <!-- Company Info -->
+        <div class="flex flex-col gap-4">
+          <img
+            src="products/logo-search-grid-1x.png"
+            alt="Logo"
+            class="h-16 w-16"
+          />
+          <h3 class="font-bold text-xl text-gray-700">Contact</h3>
+          <div class="text-gray-600 space-y-2 text-sm">
+            <p>Address: Jharkhand Bagodar District: Giridih 825322</p>
+            <p>Phone: +91 123 456 7890</p>
+            <p>Hours: Mon-Sat 9AM-6PM</p>
+          </div>
+          <div class="flex gap-4 text-gray-600">
+            <i
+              class="fab fa-facebook-f hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+            <i
+              class="fab fa-twitter hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+            <i
+              class="fab fa-instagram hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+            <i
+              class="fab fa-linkedin-in hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+          </div>
+        </div>
+
+        <!-- About Links -->
+        <div class="flex flex-col gap-4">
+          <h3 class="font-bold text-xl text-gray-700">About</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li>
+              <a href="#about" class="hover:text-cyan-600 transition-colors"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="hover:text-cyan-600 transition-colors"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-cyan-600 transition-colors"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a href="#faq" class="hover:text-cyan-600 transition-colors"
+                >FAQ</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Account Links -->
+        <div class="flex flex-col gap-4">
+          <h3 class="font-bold text-xl text-gray-700">My Account</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li>
+              <a href="#signin" class="hover:text-cyan-600 transition-colors"
+                >Sign In</a
+              >
+            </li>
+            <li>
+              <a href="#cart" class="hover:text-cyan-600 transition-colors"
+                >View Cart</a
+              >
+            </li>
+            <li>
+              <a href="#wishlist" class="hover:text-cyan-600 transition-colors"
+                >My Wishlist</a
+              >
+            </li>
+            <li>
+              <a href="#help" class="hover:text-cyan-600 transition-colors"
+                >Help</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- App Download -->
+        <div class="flex flex-col gap-4">
+          <h3 class="font-bold text-xl text-gray-700">Install App</h3>
+          <p class="text-gray-600 text-sm">From App Store or Google Play</p>
+          <div class="flex gap-2">
+            <img
+              src="pay/app.jpg"
+              alt="App Store"
+              class="h-10 rounded"
+            />
+            <img
+              src="pay/play.jpg"
+              alt="Google Play"
+              class="h-10 rounded"
+            />
+          </div>
+          <p class="text-gray-600 text-sm">Secured Payment Gateways</p>
+          <img
+            src="pay/pay.png"
+            alt="Payment Methods"
+            class="max-w-48"
+          />
+        </div>
+      </div>
+
+      <div
+        class="border-t border-gray-300 mt-8 pt-4 text-center text-gray-600 text-sm"
+      >
+        <p>&copy; 2025 Your Store. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

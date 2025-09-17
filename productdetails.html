@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+  <body class="font-sans bg-[#FEF6F6] overflow-x-hidden">
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"
+    >
+      <div class="bg-white h-full w-64 shadow-lg">
+        <div class="p-4 border-b">
+          <button
+            id="closeMobileMenuBtn"
+            class="float-right text-gray-600 hover:text-cyan-600 transition-all duration-500"
+          >
+            <i class="fas fa-times text-xl"></i>
+          </button>
+          <div class="clear-both"></div>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-4">
+            <li ><input type="text" placeholder="Search..." class="border border-gray-300 rounded-lg py-2 px-2" /></li>
+            <li>
+              <a href="index.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600" >Home</a
+              >
+            </li>
+           
+            <li>
+              <a
+                href="blog.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="block py-2 text-gray-700 hover:text-cyan-600"
+                >Contact</a
+              >
+            </li>
+            <li class="relative group">
+                    <a href="login.html" class="hover:text-cyan-600 font-Prata transition-colors">login</a>
+                    <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+
+    <nav class="flex justify-between items-center w-full py-4 shadow-lg px-4 lg:px-32 bg-[#FEF6F6] relative z-40">
+        <!-- Logo -->
+        <a href="index.html" class="flex-shrink-0">
+            <img 
+                src="products/logo-search-grid-1x.png" 
+                alt="Logo" 
+                class="h-12  md:h-16 lg:h-20 w-auto object-contain"
+                loading="eager"
+            />
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center">
+            <ul class="flex gap-8 lg:gap-10 font-semibold text-gray-700 list-none">
+              <li><input type="text" placeholder="Search..." class="border border-gray-300 rounded-lg py-2 px-4" /></li>
+                <li class="relative group">
+                    <a href="index.html" class="hover:text-cyan-600 font-Prata transition-colors">Home</a>
+                    <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                </li>
+  <li class="relative group">
+   
+        <a href="shop.html" 
+           class="text-cyan-600 font-bold border-b-2 border-cyan-600 font-Prata transition-colors">
+          shop
+        </a>
+      </li>
+                <li class="relative group">
+                    <a href="blog.html" class="hover:text-cyan-600 font-Prata transition-colors">Blog</a>
+                    <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                </li>
+                <li class="relative group">
+                    <a href="contact.html" class="hover:text-cyan-600 font-Prata transition-colors">Contact</a>
+                    <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                </li>
+                 <li class="relative group">
+                    <a href="login.html" class="hover:text-cyan-600 font-Prata transition-colors">login</a>
+                    <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-cyan-600 transition-all duration-300 group-hover:w-full"></span>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <button id="mobileMenuBtn" class="md:hidden text-gray-700 hover:text-cyan-600 transition-colors">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </nav>
+     <!-- Product Details Section -->
+<section class="flex flex-col lg:flex-row justify-evenly lg:px-20 py-10 bg-gray-50  h-full">
+  <!-- Left: Product Images -->
+  <div id="total-img" class="lg:w-2/5 w-full  md:w-2/5 lg:px-12 md:px-12 ">
+    <!-- Main Image -->
+    <div id="bigimg" class="border rounded-lg overflow-hidden shadow-md w-[90%]  lg:w-full mx-auto">
+      <img src="products/f1.jpg" alt="Main Product" class="w-full object-cover">
+    </div>
+
+    <!-- Small Thumbnails -->
+    <div  class="flex justify-between gap-3 mt-4 w-full items-center  p-2 rounded-lg">
+      <div id="Small-img" class="lg:basis-1/5 basis-1/2 cursor-pointer border rounded-lg hover:scale-105 transition">
+        <img src="products/f1.jpg" alt="Thumb 1" class="w-full lg:h-20 object-cover rounded-md">
+      </div>
+      <div id="Small-img" class="lg:basis-1/5 basis-1/2 cursor-pointer border rounded-lg  hover:scale-105 transition">
+        <img src="products/f2.jpg" alt="Thumb 2" width="100%" class="w-full lg:h-20 object-cover rounded-md">
+      </div>
+      <div id="Small-img" class="lg:basis-1/5 basis-1/2 cursor-pointer border rounded-lg hover:scale-105 transition">
+        <img src="products/f3.jpg" alt="Thumb 3" width="100%" class="w-full lg:h-20 object-cover rounded-md">
+      </div>
+      <div id="Small-img" class="lg:basis-1/5 basis-1/2 cursor-pointer border rounded-lg hover:scale-105 transition">
+        <img src="products/f4.jpg" alt="Thumb 4" width="100%" class="w-full lg:h-20 object-cover rounded-md">
+      </div>
+
+    </div>
+  </div>
+  <!-- Right: Product Details -->
+   <div class="px-20 py-16 w-fit  h-screen">
+    <div class="text-gray-600 font-bold">
+    <p>  home/t-shirts</p>
+    <h1 class="lg:text-4xl md:text-3xl text-2xl py-4">men's fashion t-shirts</h1>
+    <p class="text-black font-bold text-xl">$99.34</p>
+    <select  name="option" id="options" class="border border-gray-300 rounded-lg py-2 px-4 mt-4" >
+      <option value="XL">XL</option>
+      <option value="M">M</option>
+      <option value="MD">MD</option>
+      <option value="Large">Large</option>
+    </select>
+    </div>
+    <div class="w-full gap-4 flex  ">
+      <input id="sizebtn" type="number" value="1" class="border border-gray-300 rounded-lg py-2 px-2 mt-4 w-20 bg-gray-100" >
+      <button id="cardbtn" class="bg-cyan-600 rounded-lg  text-gray-600 py-2 px-2 mt-4 hover:bg-cyan-700 ">add to cart</button>
+    </div>
+ <div class="max-w-52 py-6 text-gray-600" >
+  <h1 class="text-2xl font-bold py-6 ">product details</h1>
+  <p>Product Name: Classic Cotton Shirt
+Material: 100% Cotton
+Fit: Slim Fit
+Neck Type: Spread Collar
+Sleeve: Full Sleeve
+Colors Available: Blue, White, Black
+Sizes: S, M, L, XL, XXL
+Price: ₹1,299 (MRP ₹1,799 – 28% Off)
+Care Instructions: Machine wash cold, tumble dry low, do not bleach.</p>
+ </div>
+   </div>
+</section>
+
+<!-- <footer></footer> -->
+   <footer id="footer" class=" py-8 md:py-12 px-4 md:px-20 mt-10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+      >
+        <!-- Company Info -->
+        <div class="flex flex-col gap-4">
+          <img
+            src="products/logo-search-grid-1x.png"
+            alt="Logo"
+            class="h-16 w-16"
+          />
+          <h3 class="font-bold text-xl text-gray-700">Contact</h3>
+          <div class="text-gray-600 space-y-2 text-sm">
+            <p>Address: Jharkhand Bagodar District: Giridih 825322</p>
+            <p>Phone: +91 123 456 7890</p>
+            <p>Hours: Mon-Sat 9AM-6PM</p>
+          </div>
+          <div class="flex gap-4 text-gray-600">
+            <i
+              class="fab fa-facebook-f hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+            <i
+              class="fab fa-twitter hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+            <i
+              class="fab fa-instagram hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+            <i
+              class="fab fa-linkedin-in hover:text-cyan-600 cursor-pointer text-lg"
+            ></i>
+          </div>
+        </div>
+
+        <!-- About Links -->
+        <div class="flex flex-col gap-4">
+          <h3 class="font-bold text-xl text-gray-700">About</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li>
+              <a href="#about" class="hover:text-cyan-600 transition-colors"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="#services" class="hover:text-cyan-600 transition-colors"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-cyan-600 transition-colors"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a href="#faq" class="hover:text-cyan-600 transition-colors"
+                >FAQ</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Account Links -->
+        <div class="flex flex-col gap-4">
+          <h3 class="font-bold text-xl text-gray-700">My Account</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li>
+              <a href="#signin" class="hover:text-cyan-600 transition-colors"
+                >Sign In</a
+              >
+            </li>
+            <li>
+              <a href="#cart" class="hover:text-cyan-600 transition-colors"
+                >View Cart</a
+              >
+            </li>
+            <li>
+              <a href="#wishlist" class="hover:text-cyan-600 transition-colors"
+                >My Wishlist</a
+              >
+            </li>
+            <li>
+              <a href="#help" class="hover:text-cyan-600 transition-colors"
+                >Help</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- App Download -->
+        <div class="flex flex-col gap-4">
+          <h3 class="font-bold text-xl text-gray-700">Install App</h3>
+          <p class="text-gray-600 text-sm">From App Store or Google Play</p>
+          <div class="flex gap-2">
+            <img
+              src="pay/app.jpg"
+              alt="App Store"
+              class="h-10 rounded"
+            />
+            <img
+              src="pay/play.jpg"
+              alt="Google Play"
+              class="h-10 rounded"
+            />
+          </div>
+          <p class="text-gray-600 text-sm">Secured Payment Gateways</p>
+          <img
+            src="pay/pay.png"
+            alt="Payment Methods"
+            class="max-w-48"
+          />
+        </div>
+      </div>
+
+      <div
+        class="border-t border-gray-300 mt-8 pt-4 text-center text-gray-600 text-sm"
+      >
+        <p>&copy; 2025 Your Store. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+
+
+
+    <script src="app.js">
+
+
+    </script>
+</body>
+</html>
