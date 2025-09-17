@@ -234,18 +234,18 @@ if(shopbtn){
             })
         }
         // serach buttonText++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//           const searchBox = document.getElementById("searchBox");
-//   const productCards = document.querySelectorAll("#product1 .grid > div");
+          const searchBox = document.getElementById("searchBox");
+  const productCards = document.querySelectorAll("#product1 .grid > div");
 
-//   searchBox.addEventListener("keyup", () => {
-//     let filter = searchBox.value.toLowerCase();
+  searchBox.addEventListener("keyup", () => {
+    let filter = searchBox.value.toLowerCase();
 
-//     productCards.forEach((card) => {
-//       let text = card.innerText.toLowerCase(); // includes brand, title, description, price
-//       if (text.includes(filter)) {
-//         card.style.display = ""; // show
-//       } else {
-//         card.style.display = "none"; // hide
-//       }
-//     });
-//   });
+    productCards.forEach((card) => {
+      let text = card.innerText.toLowerCase(); // includes brand, title, description, price
+      if (text.includes(filter)) {
+        card.style.display = ""; // show
+      } else {
+        card.style.display = "none"; // hide
+      }
+    });
+  });
